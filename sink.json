@@ -9,7 +9,7 @@
     "auto.create": "true",
     "insert.mode": "upsert",
     "pk.mode": "record_value",
-    "pk.fields": "CUSTOMER_ID",
+    "pk.fields": "customer_id",
     "table.name.format": "customers",
     "topics": "CUSTOMER_EMAILS",
 
@@ -20,6 +20,10 @@
 
     "errors.tolerance": "all",
     "errors.log.enable": "true",
-    "errors.log.include.messages": "true"
+    "errors.log.include.messages": "true",
+
+    "transforms": "Rename",
+    "transforms.Rename.type": "org.apache.kafka.connect.transforms.ReplaceField$Value",
+    "transforms.Rename.renames": "CUSTOMER_ID:customer_id,EMAIL:email"
   }
 }
