@@ -1,0 +1,14 @@
+{
+  "name": "postgres-source",
+  "config": {
+    "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+    "connection.url": "jdbc:postgresql://postgres:5432/inventory",
+    "connection.user": "postgres",
+    "connection.password": "postgres",
+    "mode": "incrementing",
+    "incrementing.column.name": "id",
+    "table.whitelist": "customers",
+    "topic.prefix": "postgres-",
+    "poll.interval.ms": "5000"
+  }
+}
