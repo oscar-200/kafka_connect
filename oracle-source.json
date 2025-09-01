@@ -1,0 +1,14 @@
+{
+  "name": "oracle-source",
+  "config": {
+    "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+    "connection.url": "jdbc:oracle:thin:@oracle-db:1521/XEPDB1",
+    "connection.user": "system",
+    "connection.password": "oracle",
+    "mode": "incrementing",
+    "incrementing.column.name": "ID",
+    "table.whitelist": "CUSTOMERS",
+    "topic.prefix": "oracle-",
+    "poll.interval.ms": "5000"
+  }
+}
