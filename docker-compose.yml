@@ -139,6 +139,7 @@ services:
       - ORACLE_PWD=oracle
     volumes:
       - oracle-data:/opt/oracle/oradata # Path for persistent data
+      - './backupss:/mnt/storage/backups/'
 
 
 volumes:
